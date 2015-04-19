@@ -1,6 +1,6 @@
 # torf
 
-[![Build Status](https://travis-ci.org/besarthoxhaj/torf.svg?branch=master)](https://travis-ci.org/besarthoxhaj/torf) [![Code Climate](https://codeclimate.com/github/besarthoxhaj/torf/badges/gpa.svg)](https://codeclimate.com/github/besarthoxhaj/torf) [![Test Coverage](https://codeclimate.com/github/besarthoxhaj/torf/badges/coverage.svg)](https://codeclimate.com/github/besarthoxhaj/torf)
+[![Build Status](https://travis-ci.org/besarthoxhaj/torf.svg?branch=master)](https://travis-ci.org/besarthoxhaj/torf) [![Code Climate](https://codeclimate.com/github/besarthoxhaj/torf/badges/gpa.svg)](https://codeclimate.com/github/besarthoxhaj/torf) [![Test Coverage](https://codeclimate.com/github/besarthoxhaj/torf/badges/coverage.svg)](https://codeclimate.com/github/besarthoxhaj/torf) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/besarthoxhaj/torf/issues)
 
 Run with:
 
