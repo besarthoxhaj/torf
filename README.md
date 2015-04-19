@@ -1,5 +1,7 @@
 # torf
 
+[![Build Status](https://travis-ci.org/besarthoxhaj/torf.svg?branch=master)](https://travis-ci.org/besarthoxhaj/torf)
+
 Small library for cheking if a variable is ***ok***.
 
 	npm install torf --save
