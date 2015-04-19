@@ -1,6 +1,8 @@
 # torf
 
-[![Build Status](https://travis-ci.org/besarthoxhaj/torf.svg?branch=master)](https://travis-ci.org/besarthoxhaj/torf)
+[![Build Status](https://travis-ci.org/besarthoxhaj/torf.svg?branch=master)](https://travis-ci.org/besarthoxhaj/torf) [![Code Climate](https://codeclimate.com/github/besarthoxhaj/torf/badges/gpa.svg)](https://codeclimate.com/github/besarthoxhaj/torf) [![Test Coverage](https://codeclimate.com/github/besarthoxhaj/torf/badges/coverage.svg)](https://codeclimate.com/github/besarthoxhaj/torf)
+
+Run with:
 
 Small library for cheking if a variable is ***ok***.
 
