@@ -10,7 +10,7 @@ Small library for cheking if a variable is ***ok***.
 
 For readability I suggest to save the module in a variable called `is`.
 
-#is.ok();
+##is.ok();
 
 This method simply checks if a variable is ***ok*** in general terms. ***Is ok*** means that a variable is defined and in case it is an object (or array) that it is not empty or the content is undifined or null. 
 
@@ -49,7 +49,7 @@ is.ok(function(){ return function(){ return false;}}); // false
 is.ok(function(){ return function(){ return true;}});  // true
 ```
 
-#is.email();
+##is.email();
 
 Internally it uses a regular expression `/\S+@\S+\.\S+/` which pretty ***generous***. If you need more restriction I suggest to look at the second example.
 
@@ -73,7 +73,7 @@ is.email('foo@bar.com', new RegExp(/[\s\S]/));  // true
 
 ```
 
-#is.type();
+##is.type();
 
 This method simply checks that the class or primitive value of first argument is what the second argument says.
 
@@ -82,7 +82,6 @@ var is = require('torf');
 
 is.type('string', 'string'); // true
 is.type(['fooo'], 'array');  // true
-is.type(null, 'null');       // TRUE!
 is.type({a:'hi'}, 'string'); // false
 ```
 
