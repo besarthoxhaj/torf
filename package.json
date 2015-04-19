@@ -4,8 +4,14 @@
   "description": "Small utility for checking if variables are defined and non empty",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- --recursive -R dot"
+    "test": "./node_modules/jshint/bin/jshint",
+    "jshint": "jshint -c ./.jshintrc --exclude-path .gitignore .",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha && istanbul check-coverage --statements 95 --functions 95 --lines 95 --branches 95"
   },
+  "pre-commit": [
+    "jshint",
+    "coverage"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/besarthoxhaj/torf"
@@ -15,7 +21,9 @@
   "devDependencies": {
     "chai": "^2.2.0",
     "istanbul": "^0.3.13",
-    "mocha": "^2.2.4"
+    "jshint": "^2.7.0",
+    "mocha": "^2.2.4",
+    "pre-commit": "^1.0.6"
   },
   "dependencies": {
     "is-number": "^1.1.2"

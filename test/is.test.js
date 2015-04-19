@@ -13,11 +13,11 @@ var shouldPassOk = [
 	[{'bes':'foo'}],
 	new Date(),
 	true,
-	function(){return true},
-	function(){return ['bes']},
-	function(){return {'bes':'foo'}},
-	function(){return [{'bes':'foo'}]},
-	function(){return function(){return true}}
+	function(){return true;},
+	function(){return ['bes'];},
+	function(){return {'bes':'foo'};},
+	function(){return [{'bes':'foo'}];},
+	function(){return function(){return true;};}
 ];
 
 
@@ -30,7 +30,7 @@ var shouldPassType = [
 	[{'bes':'foo'}, 'object'],
 	[new Date(), 'date'],
 	[true, 'boolean'],
-	[function(){return true}, 'function'],
+	[function(){return true;}, 'function'],
 	[25, 'number']
 ];
 
@@ -51,13 +51,13 @@ var shouldFailOk = [
 	[Infinity],
 	[undefined],
 	function(){},
-	function(){return NaN},
-	function(){return null},
-	function(){return false},
-	function(){return Infinity},
-	function(){return undefined},
-	function(){return [undefined]},
-	function(){return function(){return false}}
+	function(){return NaN;},
+	function(){return null;},
+	function(){return false;},
+	function(){return Infinity;},
+	function(){return undefined;},
+	function(){return [undefined];},
+	function(){return function(){return false;};}
 ];
 
 
@@ -69,7 +69,7 @@ var shouldFailType = [
 	[{'bes':'foo'}, 'array'],
 	[new Date(), 'boolean'],
 	[true, 'date'],
-	[function(){return true}, 'Math'],
+	[function(){return true;}, 'Math'],
 	[Infinity, 'number'],
 	[2, 'randomString'],
 	[{}, 'randomString']

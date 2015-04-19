@@ -18,7 +18,7 @@ module.exports = {
 function isEmpty (obj){
 
 	return (Object.getOwnPropertyNames(obj).length === 0);
-};
+}
 
 
 
@@ -44,7 +44,7 @@ function ok (arg){
 		default:
 			return true;
 	}
-};
+}
 
 
 
@@ -56,7 +56,7 @@ function isType (arg, type){
 		return isNumber(arg);
 	}else{
 		return classType.toLowerCase() === type.toLowerCase() ? true : false;
-	};
+	}
 }
 
 
@@ -69,5 +69,5 @@ function checkEmail (email, regexp){
 		return result;
 	}else{
 		return false;
-	};
-};
+	}
+}
