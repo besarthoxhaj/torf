@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/jshint/bin/jshint",
     "jshint": "jshint -c ./.jshintrc --exclude-path .gitignore .",
-    "coverage": "istanbul cover ./node_modules/.bin/_mocha && istanbul check-coverage --statements 95 --functions 95 --lines 95 --branches 95"
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100"
   },
   "pre-commit": [
     "jshint",
