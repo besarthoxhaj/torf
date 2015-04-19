@@ -1,6 +1,6 @@
 {
   "name": "torf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Small utility for checking if variables are defined and non empty",
   "main": "index.js",
   "scripts": {
