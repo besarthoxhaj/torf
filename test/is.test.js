@@ -16,7 +16,8 @@ var shouldPassOk = [
 	function(){return true},
 	function(){return ['bes']},
 	function(){return {'bes':'foo'}},
-	function(){return [{'bes':'foo'}]}
+	function(){return [{'bes':'foo'}]},
+	function(){return function(){return true}}
 ];
 
 
@@ -55,7 +56,8 @@ var shouldFailOk = [
 	function(){return false},
 	function(){return Infinity},
 	function(){return undefined},
-	function(){return [undefined]}
+	function(){return [undefined]},
+	function(){return function(){return false}}
 ];
 
 
