@@ -6,6 +6,10 @@
   "scripts": {
     "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- --recursive -R dot"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/besarthoxhaj/torf"
+  },
   "author": "Besart Hoxhaj, William Fisher",
   "license": "MIT",
   "devDependencies": {
