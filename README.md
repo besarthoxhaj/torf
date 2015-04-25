@@ -51,6 +51,39 @@ is.ok(function(){ return function(){ return false;}}); // false
 is.ok(function(){ return function(){ return true;}});  // true
 ```
 
+
+##is.type();
+
+This method simply checks the first argument class or primitive value against the second argument.
+
+```js
+var is = require('torf');
+
+is.type('string', 'string'); // true
+is.type(['fooo'], 'array');  // true
+is.type({a:'hi'}, 'string'); // false
+```
+
+It is possible to pass an array of classes as second argument, in which case it will return true if one of the classes is matched.
+
+```js
+var is = require('torf');
+
+is.type('string', ['string', 'number', 'object']); // true
+is.type(['fooo'], ['null', 'array', 'date']);      // true
+is.type({a:'hi'}, ['string', 'number', 'array']);  // false
+```
+
+
+The comparison is done by calling the `Object.prototype.toString()` to detect object class so it's possible
+to test alse `undefined === null`.
+
+```js
+is.type(undefined, 'null');  // false
+is.type(null, 'null');       // true
+```
+
+
 ##is.email();
 
 Internally it uses a regular expression `/\S+@\S+\.\S+/` which is pretty ***generous***. If you need more restriction I suggest to look at the second example.
@@ -73,24 +106,4 @@ var is = require('torf');
 
 is.email('foo@bar.com', new RegExp(/[\s\S]/));  // true
 
-```
-
-##is.type();
-
-This method simply checks the first argument class or primitive value against the second argument.
-
-```js
-var is = require('torf');
-
-is.type('string', 'string'); // true
-is.type(['fooo'], 'array');  // true
-is.type({a:'hi'}, 'string'); // false
-```
-
-The comparison is done by calling the `Object.prototype.toString()` to detect object class so it's possible
-to test alse `undefined === null`.
-
-```js
-is.type(undefined, 'null');  // false
-is.type(null, 'null');       // true
 ```

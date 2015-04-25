@@ -79,6 +79,7 @@ var shouldFailType = [
 	[2, 'randomString'],
 	[{}, 'randomString'],
 	[Infinity, ['number','string']],
+	[{}, ['number','string','array','date','null','undefined']],
 	[null, ['number','string','date']],
 	[null, ['number','string','date']],
 	[NaN, ['number','string','date']],
