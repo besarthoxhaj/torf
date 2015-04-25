@@ -4,7 +4,7 @@
   "description": "Small utility for checking if variables are defined and non empty",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/_mochaettore",
+    "test": "./node_modules/.bin/_mocha",
     "jshint": "jshint -c ./.jshintrc --exclude-path .gitignore .",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100"
   },

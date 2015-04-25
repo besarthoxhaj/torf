@@ -2,10 +2,6 @@
 
 
 
-var isNumber = require('is-number');
-
-
-
 module.exports = {
 	ok:    ok,
 	email: checkEmail,
@@ -34,7 +30,7 @@ function ok (arg){
 		case '[object Undefined]':
 			return false;
 		case '[object Number]':
-			return isNumber(arg);
+			return isFinite(arg);
 		case '[object String]':
 			return true;
 		case '[object Boolean]':
@@ -48,15 +44,35 @@ function ok (arg){
 
 
 
+function getClassName (arg) {
+	return Object.prototype.toString.call(arg).match(/\s[a-zA-Z]+/)[0].trim().toLowerCase();
+}
+
+
+
 function isType (arg, type){
 
-	var classType = Object.prototype.toString.call(arg).match(/\s[a-zA-Z]+/)[0].trim();
+	return (function test (arg, type){
 
-	if(type.toLowerCase() === 'number'){
-		return isNumber(arg);
-	}else{
-		return classType.toLowerCase() === type.toLowerCase() ? true : false;
-	}
+		if(getClassName(type) === 'array'){
+			if(getClassName(arg) === 'object' && type[0] === 'object'){
+				return true;
+			}else if(getClassName(arg) === type[0] && isFinite(arg)){
+				return true;
+			}else if(getClassName(type[0]) === 'undefined'){
+				return false;
+			}else{
+				type.shift();
+				return test(arg, type);
+			}
+		}else{
+			if(getClassName(arg) === 'number' && type === 'number'){
+				return isFinite(arg);
+			}else{
+				return getClassName(arg) === type;
+			}
+		}
+	})(arg, type);
 }
 
 

@@ -31,7 +31,11 @@ var shouldPassType = [
 	[new Date(), 'date'],
 	[true, 'boolean'],
 	[function(){return true;}, 'function'],
-	[25, 'number']
+	[25, 'number'],
+	[25, ['number','string']],
+	[{}, ['number','string','object']],
+	[[], ['number','string','object','array']],
+	[new Date(), ['number','string','object','array','randomString','date']]
 ];
 
 
@@ -63,6 +67,7 @@ var shouldFailOk = [
 
 var shouldFailType = [
 	[null, 'undefined'],
+	[new Date(), 'number'],
 	[undefined, 'array'],
 	['string', 'object'],
 	[['bes'], 'string'],
@@ -72,7 +77,13 @@ var shouldFailType = [
 	[function(){return true;}, 'Math'],
 	[Infinity, 'number'],
 	[2, 'randomString'],
-	[{}, 'randomString']
+	[{}, 'randomString'],
+	[Infinity, ['number','string']],
+	[null, ['number','string','date']],
+	[null, ['number','string','date']],
+	[NaN, ['number','string','date']],
+	[new Date(), ['string','object','array','null','number']],
+	[new Date(), ['string','object','array','null','randomString']]
 ];
 
 
